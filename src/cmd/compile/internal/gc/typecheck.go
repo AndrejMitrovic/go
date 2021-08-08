@@ -2114,7 +2114,7 @@ func typecheck1(n *Node, top int) (res *Node) {
 
 	if (top&ctxStmt != 0) && top&(ctxCallee|ctxExpr|ctxType) == 0 && ok&ctxStmt == 0 {
 		if !n.Diag() {
-			yyerror("%v evaluated but not used", n)
+			//yyerror("%v evaluated but not used", n)
 			n.SetDiag(true)
 		}
 

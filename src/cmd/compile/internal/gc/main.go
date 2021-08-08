@@ -1351,11 +1351,11 @@ func pkgnotused(lineno src.XPos, path string, name string) {
 	if i := strings.LastIndex(elem, "/"); i >= 0 {
 		elem = elem[i+1:]
 	}
-	if name == "" || elem == name {
-		yyerrorl(lineno, "imported and not used: %q", path)
-	} else {
-		yyerrorl(lineno, "imported and not used: %q as %s", path, name)
-	}
+	// if name == "" || elem == name {
+	// 	yyerrorl(lineno, "imported and not used: %q", path)
+	// } else {
+	// 	yyerrorl(lineno, "imported and not used: %q as %s", path, name)
+	// }
 }
 
 func mkpackage(pkgname string) {
